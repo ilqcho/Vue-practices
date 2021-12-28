@@ -60,6 +60,9 @@ app.component('product-display', {
       addToCart() {
           this.$emit('add-to-cart', this.variants[this.selectedVariant].id)
       },
+      addToCart() {
+        this.$emit('remove-from-cart', this.variants[this.selectedVariant].id)
+      },
       updateVariant(index) {
           this.selectedVariant = index
       },
